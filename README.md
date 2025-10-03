@@ -138,8 +138,8 @@ Make a folder for the compiler installation.
 
 ```
 sudo mkdir -p /opt/cross-pi-gcc
-sudo chown $USER /cross-pi-gcc
-export PATH=/cross-pi-gcc/bin:$PATH
+sudo chown $USER /opt/cross-pi-gcc
+export PATH=/opt/cross-pi-gcc/bin:$PATH
 ```
 
 Copy the kernel headers in the above folder.
@@ -149,7 +149,7 @@ cd $HOME
 cd qt-cross-compilation-for-opi/gcc_all
 cd linux-orangepi
 KERNEL=kernel7
-make ARCH=arm64 INSTALL_HDR_PATH=/cross-pi-gcc/aarch64-linux-gnu headers_install
+make ARCH=arm64 INSTALL_HDR_PATH=/opt/cross-pi-gcc/aarch64-linux-gnu headers_install
 ```
 
 Build Binutils. You should modify the following commands to your needs. If you got an error you will likely need to execute the following commands: "make distclean", then "rm -f config.cache", then reconfigure, then run just "make" without -j flag to see the more descriptive error.
@@ -157,7 +157,7 @@ Build Binutils. You should modify the following commands to your needs. If you g
 ```
 cd ~/qt-cross-compilation-for-opi/gcc_all
 mkdir build-binutils && cd build-binutils
-../binutils-2.38/configure --prefix=/cross-pi-gcc --target=aarch64-linux-gnu --with-arch=armv8 --disable-multilib
+../binutils-2.38/configure --prefix=/opt/cross-pi-gcc --target=aarch64-linux-gnu --with-arch=armv8 --disable-multilib
 make -j 8
 make install
 ```
