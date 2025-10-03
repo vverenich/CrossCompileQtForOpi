@@ -537,7 +537,8 @@ Go to "Projects" -> "Orange Pi 3B Qt-6.8.0" -> "Run".
 1) Under "Alternate executable on device" make sure "Use this command" is checked. Provide the path to the executable on remote linux device.
 2) Provide command line arguments, at least "--platform eglfs".
 
-<img width="1829" height="294" alt="image" src="https://github.com/user-attachments/assets/d9b939df-b2d5-4deb-a263-46007c275eda" />
+<img width="1829" height="294" alt="image" src="https://github.com/user-attachments/assets/dedcd8ca-1607-4564-89ef-9b55de3350b9" />
+
 
 3) Under "Environment" section add the variable LD_LIBRARY_PATH=:/usr/local/qt6/lib/
 
@@ -545,7 +546,8 @@ Go to "Projects" -> "Orange Pi 3B Qt-6.8.0" -> "Run".
 
 This is the time to run the project. Right-click on project root folder -> "Run CMake", then "Build", then "Run".
 
-<img width="1280" height="964" alt="image" src="https://github.com/user-attachments/assets/5dade4c9-0781-4050-b3cb-b24200bd6470" />
+<img width="1904" height="444" alt="image" src="https://github.com/user-attachments/assets/0605a22b-4e17-4262-9fe1-b44cf4e63c64" />
+
 
 
 
