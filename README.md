@@ -542,11 +542,13 @@ Go to "Projects" -> "Orange Pi 3B Qt-6.8.0" -> "Run".
 
 3) Under "Environment" section add the variable LD_LIBRARY_PATH=:/usr/local/qt6/lib/
 
-<img width="1904" height="444" alt="image" src="https://github.com/user-attachments/assets/d3f1258e-21fa-40a6-a763-28f74c0502a4" />
+<img width="1904" height="444" alt="image" src="https://github.com/user-attachments/assets/fcaf25b7-cc1c-48bd-a864-3cb24c73ce27" />
+
 
 This is the time to run the project. Right-click on project root folder -> "Run CMake", then "Build", then "Run".
 
-<img width="1904" height="444" alt="image" src="https://github.com/user-attachments/assets/0605a22b-4e17-4262-9fe1-b44cf4e63c64" />
+<img width="1280" height="964" alt="image" src="https://github.com/user-attachments/assets/0c981d78-6d3a-4363-96d1-59b2578ddcb1" />
+
 
 
 
