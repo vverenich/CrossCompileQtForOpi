@@ -237,7 +237,7 @@ Use the mirror(https://mirrors.dotsrc.org/qtproject/official_releases/qt/6.8/6.8
 ```
 cd qt6/src
 wget https://download.qt.io/official_releases/qt/6.8/6.8.0/single/qt-everywhere-src-6.8.0.tar.xz
-tar xf qt-everywhere-src-6.8.3.tar.xz
+tar xf qt-everywhere-src-6.8.0.tar.xz
 ```
 
 #### Build Qt6 for host
