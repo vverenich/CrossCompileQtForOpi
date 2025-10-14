@@ -99,8 +99,30 @@ Install necessary packages.
 sudo apt-get install make build-essential libclang-dev ninja-build gcc git bison python3 gperf pkg-config libfontconfig1-dev libfreetype6-dev libx11-dev libx11-xcb-dev libxext-dev libxfixes-dev libxi-dev libxrender-dev libxcb1-dev libxcb-glx0-dev libxcb-keysyms1-dev libxcb-image0-dev libxcb-shm0-dev libxcb-icccm4-dev libxcb-sync-dev libxcb-xfixes0-dev libxcb-shape0-dev libxcb-randr0-dev libxcb-render-util0-dev libxcb-util-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev libatspi2.0-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev build-essential gawk git texinfo bison file wget libssl-dev gdbserver gdb-multiarch libxcb-cursor-dev gcc-aarch64-linux-gnu flex libtool gettext cmake 
 ```
 
+## Cross-compiler
 
-## Build gcc as a cross compiler
+Make a folder for the compiler installation.
+
+```
+sudo mkdir -p /opt/cross-pi-gcc
+sudo chown $USER /opt/cross-pi-gcc
+export PATH=/opt/cross-pi-gcc/bin:$PATH
+```
+
+### (Option A) Download the compiler
+
+Download the compiler from the next website: https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu/
+
+```
+cd $HOME
+wget https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
+sudo tar xf gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz -C /opt --transform='s/^gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/cross-pi-gcc/'
+cd /opt/
+sudo chmod -R 777 cross-pi-gcc/
+```
+
+
+### (Option B) Build gcc as a cross-compiler
 
 Execute the following command:
 
@@ -134,15 +156,8 @@ cd gcc-11.4.0
 contrib/download_prerequisites
 ```
 
-Make a folder for the compiler installation.
 
-```
-sudo mkdir -p /opt/cross-pi-gcc
-sudo chown $USER /opt/cross-pi-gcc
-export PATH=/opt/cross-pi-gcc/bin:$PATH
-```
-
-Copy the kernel headers in the above folder.
+Copy the kernel headers to the /opt/cross-pi-gcc.
 
 ```
 cd $HOME
