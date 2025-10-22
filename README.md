@@ -109,21 +109,6 @@ sudo chown $USER /opt/cross-pi-gcc
 export PATH=/opt/cross-pi-gcc/bin:$PATH
 ```
 
-### (Option A) Download the compiler
-
-Download the compiler from the next website: https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu/
-
-```
-cd $HOME
-wget https://releases.linaro.org/components/toolchain/binaries/latest-7/aarch64-linux-gnu/gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz
-sudo tar xf gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu.tar.xz -C /opt --transform='s/^gcc-linaro-7.5.0-2019.12-x86_64_aarch64-linux-gnu/cross-pi-gcc/'
-cd /opt/
-sudo chmod -R 777 cross-pi-gcc/
-```
-
-
-### (Option B) Build gcc as a cross-compiler
-
 Execute the following command:
 
 ```
